@@ -1,5 +1,5 @@
-// Provided by:   ____________(your name here)__________
-// Email Address: ____________(your email address here)________
+// Provided by:   ____________Fuad Rabbi__________
+// Email Address: ____________frabbi000@citymail.cuny.edu________
 // The work in this assignment is my own. Any outside sources have been properly cited.
 
 #include "stats.h"
@@ -7,22 +7,18 @@
 
 namespace main_savitch_2C
 {
-    statistician::statistician()
-    {
+    statistician::statistician() {
         count = 0;
         total = 0.0;
         // tinyest and largest are not valid until at least one next() call
     }
 
-    void statistician::next(double r)
-    {
-        if (count == 0)
-        {
+    void statistician::next(double r) {
+        if (count == 0) {
             tinyest = r;
             largest = r;
         }
-        else
-        {
+        else {
             if (r < tinyest) tinyest = r;
             if (r > largest) largest = r;
         }
@@ -31,42 +27,35 @@ namespace main_savitch_2C
         total += r;
     }
 
-    void statistician::reset()
-    {
+    void statistician::reset() {
         count = 0;
         total = 0.0;
     }
 
-    int statistician::length() const
-    {
+    int statistician::length() const {
         return count;
     }
 
-    double statistician::sum() const
-    {
+    double statistician::sum() const {
         return total;
     }
 
-    double statistician::mean() const
-    {
+    double statistician::mean() const {
         assert(count > 0);
         return total / count;
     }
 
-    double statistician::minimum() const
-    {
+    double statistician::minimum() const {
         assert(count > 0);
         return tinyest;
     }
 
-    double statistician::maximum() const
-    {
+    double statistician::maximum() const {
         assert(count > 0);
         return largest;
     }
 
-    statistician operator+(const statistician& s1, const statistician& s2)
-    {
+    statistician operator+(const statistician& s1, const statistician& s2) {
         if (s1.length() == 0) return s2;
         if (s2.length() == 0) return s1;
 

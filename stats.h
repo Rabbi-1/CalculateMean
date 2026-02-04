@@ -1,5 +1,5 @@
-// Provided by:   ____________(your name here)__________
-// Email Address: ____________(your email address here)________
+// Provided by:   ____________Fuad Rabbi__________
+// Email Address: ____________frabbi000@citymail.cuny.edu________
 // FILE: stats.h
 // CLASS PROVIDED: statistician
 //   (a class to keep track of statistics on a sequence of real numbers)
